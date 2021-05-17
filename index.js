@@ -51,19 +51,19 @@ const { limit } = require('./database/menu/limit*/
 const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
 const tobzkey = 'apitobz';
-const BotName = 'Causs bot'; 
+const BotName = 'Kkk bot'; 
 const instagram = 'http://www.instagram.com/'; 
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Causs\n' // Nama kamu
-            + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=554792091566:+55 47992091566\n' //Nomor whatsapp kamu
+            + 'FN:Bruno\n' // Nama kamu
+            + 'ORG:Kauan;\n' // Nama bot
+            + 'TEL;;type=CELL;type=VOICE;waid=56599236354:+55 65 9923-6354\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '.','!','#'
 blocked = []
 limitawal = '999999999'
-cr = '*Causs*'
+cr = '*Kauan*'
 
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
@@ -203,10 +203,10 @@ async function starts() {
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
 	client.on('connecting', () => {
-		start('2', 'Quase la...')
+		start('2', 'Quase la kkkk...')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado leke')
+		success('2', 'Conectado mano')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -288,22 +288,22 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando só pode ser usado em grupos! ❌',
 					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD CAUSS BOT*',
+					mod: '[❗] ESTE PEDIDO É ESPECÍFICO PARA USUARIO MOD Kkk BOT*',
 					benned: 'Você para a banda, por favor, contate o proprietário para abrir sua banda',
-					ownerG: '[❗] Causs? Este é um recurso especial para o Causs ❌',
-					ownerB: '[❗] Causs? Este é um recurso especial para o Causs ❌',
-					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de CAUSS. Registre-se para fazer amizade com o bot Causs por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Causs|17\n\n──「 CAUSS BOT 」──`,
+					ownerG: '[❗] Bruno? Este é um recurso especial para o Bruno ❌',
+					ownerB: '[❗] Bruno? Este é um recurso especial para o Bruno ❌',
+					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de Bruno. Registre-se para fazer amizade com o bot Causs por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Causs|17\n\n──「 CAUSS BOT 」──`,
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: ' [❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["554792091566@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"554792091566@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["554792091566@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["554792091566@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["554792091566@s.whatsapp.net","558296156440@s.whatsapp.net"] 
+			const ownerNumber = ["556599236354@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"556599236354@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["556599236354@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["556599236354@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["556599236354@s.whatsapp.net","558296156440@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -749,8 +749,12 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, help(prefix), text)
-					break
+					me = client.user
+					   uptime = process.uptime () 
+					   putagg = fs.readFileSync('./assets/menuimg.jpg')
+					   menuimg = fs.readFileSync('./assets/menuimg.jpg')
+                      client.sendMessage(from, help(prefix, pushname), text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "*meu menu 👉👈*", 'jpegThumbnail': fs.readFileSync('./assets/botlogo.webp')}}}})
+                    break           
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
@@ -3061,7 +3065,7 @@ break
 					break
 			    case 'owner':
                     client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                    client.sendMessage(from, 'Ctt do meu dono ai, pfv n flode o chat',MessageType.text, { quoted: mek} )
+                    client.sendMessage(from, 'Ctt do meu dono ai, pfv n flode o chat bb',MessageType.text, { quoted: mek} )
                     break
                 case 'fitnah':	
 				case 'fake':          
@@ -3597,8 +3601,8 @@ break
                     break
 				case 'dono':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* CAUSS\n*YOUTUBE:* https://youtube.com/channel/UCpB3qh2Sp3K23s9a2Q-Gf-g\n*WPP:* wa.me/+5547992091566\n*INSTA:* @animexx_png\n\n\nEspero que tenham gostado do bot 🐊🚩️'})
+					buffer = await getBuffer(`https://i.ibb.co/420kbVr/kkkbot.png`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* Bruno\n*WPP:* wa.me/+556599236354\n\nEspero que tenham gostado do bot ️'})
 					break
 				case 'setprefix':
 					if (args.length < 1) return
@@ -4014,14 +4018,17 @@ break
 						reply('Só uma foto mano')
 					}
 					break
-				default:
+	ult:
+.				if (body.startsWith(`${prefix}${command}`)) {
+                  reply(`Olá ${pushname},\n desculpe **${command}*\n não está registrado no meu *menu*\n digite *.menu* e veja meus comandos`)
+                  }
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'eita bixo comando não registrado de', color(sender.split('@')[0]))
+						console.log(color('[kkk]','blue'), 'Comando não registrado no kkk bot', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
@@ -4030,3 +4037,4 @@ break
 	})
 }
 starts()
+		
