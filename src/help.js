@@ -1,5 +1,5 @@
 const help = (pushname, prefix) => {
-	return `Olá ${pushname} bem vindo ao menu
+	return `Olá bem vindo ao meu menuzin👉👈😗
 <══════════════════════>
       *Kkk BOT*
  <══════════════════════>
@@ -10,7 +10,7 @@ __ *DONO*    : BRUNO
 ┌─────────❶.❷────────
 ║〘 INFORMAÇÕES 〙
 ║
-╠^ *CAUSS BOT* 
+╠^ *KKK BOT* 
 ╠^ DONO:  ⃬⃗BRUNO (base dark) 
 ╠^ *wa.me/+5547992091566*
 ╠^ STATUS: ON
