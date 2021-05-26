@@ -753,7 +753,7 @@ if (text.includes("placa"))
 					   uptime = process.uptime () 
 					   putagg = fs.readFileSync('./assets/menuimg.jpg')
 					   menuimg = fs.readFileSync('./assets/menuimg.jpg')
-                      client . sendMessage ( from , help ( prefix , pushname ), text)
+                      client . sendMessage ( from , help(prefix), text)
                     break           
 				case 'help1':
 				case 'menu1':
