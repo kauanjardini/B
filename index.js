@@ -749,12 +749,10 @@ if (text.includes("placa"))
 			switch(command) {
 				case 'help':
 				case 'menu':
-					me = client.user
-					   uptime = process.uptime () 
-					   putagg = fs.readFileSync('./assets/menuimg.jpg')
-					   menuimg = fs.readFileSync('./assets/menuimg.jpg')
-                      client . sendMessage ( from , help(prefix), text)
-                    break           
+						uptime = process.uptime ()
+                    putagg = await getBuffer(`https://i.ibb.co/p4VgTqh/images.png`)
+                    client.sendMessage(from, putagg, image, {quoted: mek, caption: help(prefix)})
+                    break
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
