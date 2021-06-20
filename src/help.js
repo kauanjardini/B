@@ -1,4 +1,4 @@
-const help = (pushname, prefix) => {
+const help = (prefix) => {
 	return `Olá bem vindo ao meu menuzin👉👈😗
 <══════════════════════>
       *Kkk BOT*
